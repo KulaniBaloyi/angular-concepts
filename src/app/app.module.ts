@@ -6,10 +6,16 @@ import { NgIf,NgFor,NgClass,NgStyle } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { AboutComponent } from './about/about.component';
+import { DetailsPageComponent } from './details-page/details-page.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AboutComponent,
+    DetailsPageComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
