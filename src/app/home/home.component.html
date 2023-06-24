@@ -1,0 +1,42 @@
+<div class="border border-purple-900 min-h-screen">
+    <div class="border p-5 m-10 w-3/5 mx-auto rounded-md my-10">
+        <form class="flex flex-col space-y-5" (ngSubmit)="onSubmit()">
+          <div class="flex flex-col space-y-4">
+            <label>Username:</label>
+            <input class="border p-2 rounded-md ml-2" type="text" [(ngModel)]="username" name="username" />
+          </div>
+    
+          <div class="flex flex-col space-y-4">
+            <label>Password:</label>
+            <input class="border p-2 rounded-md ml-2" type="password" [(ngModel)]="password" name="password" />
+          </div>
+    
+          <button type="submit" class="p-2 bg-cyan-900 text-white rounded-md cursor-pointer">Submit</button>
+        </form>
+    <div class="p-2 bg-neutral-200 rounded-md my-5" *ngIf="username">
+      <p>Username: {{ username }}</p>
+      <p>Password: {{ password }}</p>
+    </div>
+        
+      </div>
+
+      <div class="w-3/5 mx-auto flex justify-center">
+        <button class=" p-2 rounded-md bg-teal-600 " (click)="openModal()">Show Modal</button>
+      </div>
+      <div class="fixed inset-0 z-50 bg-neutral-800/90 flex justify-center items-center" *ngIf="showElement">
+        <div class="bg-white rounded-md w-3/5 p-4 flex flex-col items-start">
+          <button (click)="closeModal()" class="rounded-md p-2 bg-emerald-800 text-white cursor-pointer self-end">Close Modal</button>
+          <section class="p-5 py-36 w-full border rounded-md my-5">
+            <h1>Main Content here</h1>
+          </section>
+        </div>
+      </div>
+      
+ 
+
+  <ul class="mx-auto w-3/5 p-5 border my-5 grid grid-cols-3 gap-4 pt-10 relative rounded-md" >
+    <p class="absolute top-2 left-2 text-xl uppercase font-serif font-semibold">List of sugar</p>
+    
+    <li class=" text-center p-2 rounded-md bg-orange-900 text-white" *ngFor="let item of items">{{ item }}</li>
+  </ul>
+</div>

@@ -7,21 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title ='Basic Angular Concepts';
-  username: string = '';
-  password: String = '';
-  showElement = false;
-  items:string[] = ['item1','item2','item3']
 
-  onSubmit() {
-    const username = this.username
-    const password = this.password
-
-    console.log('User details: ', {username,password})
-  }
-  closeModal() {
-    this.showElement = false;
-  }
-  openModal() {
-    this.showElement = true;
-  }
 }

@@ -1,8 +1,18 @@
-<div class="flex justify-between items-center p-5 border-double border-4 border-yellow-700">
+<div class="flex justify-between items-center p-5 border-double border-4 border-yellow-700 my-5 bg-yellow-700/10">
     <h1 class="text-3xl">header</h1>
     <ul class="flex space-x-4">
-        <li class="border rounded-md p-2 cursor-pointer">link to 1</li>
-        <li class="border rounded-md p-2 cursor-pointer">link to 2</li>
-        <li class="border rounded-md p-2 cursor-pointer">link to 3</li>
+        <li class="border border-yellow-700 hover:bg-yellow-700 hover:text-white rounded-md transition-colors duration-500 p-2 cursor-pointer">
+            <a
+          
+            [routerLink]="['/about']">
+            About
+          </a>
+    
+        </li>
+        <li class="border border-yellow-700 hover:bg-yellow-700 hover:text-white rounded-md transition-colors duration-500 p-2 cursor-pointer">Products</li>
+        <li class="border border-yellow-700 hover:bg-yellow-700 hover:text-white rounded-md transition-colors duration-500 p-2 cursor-pointer">Contact</li>
     </ul>
+
 </div>
+
+
